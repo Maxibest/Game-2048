@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="stars/stars.css">
+  <title>Jeu 2048</title>
+</head>
+
+<body>
+  <div id='stars1'></div>
+
+  <section class="container">
+    <div class="game-container">
+      <div class="score-reset">
+        <h1>2048</h1>
+        <p><b>SCORE</b><br><span id="score">0</span></p>
+        <p><b>Meilleur score</b><br><span id="best-score">0</span></p>
+
+        <button class="reset-btn" onclick="reset()"><i class='bx bx-reset'></i></button>
+      </div>
+      <div class="grid">
+        <div class="case"></div>
+        <div class="case"></div>
+        <div class="case"></div>
+        <div class="case"></div>
+        <div class="case"></div>
+        <div class="case"></div>
+        <div class="case"></div>
+        <div class="case"></div>
+        <div class="case"></div>
+        <div class="case"></div>
+        <div class="case"></div>
+        <div class="case"></div>
+        <div class="case"></div>
+        <div class="case"></div>
+        <div class="case"></div>
+        <div class="case"></div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </section>
+
+</html>
