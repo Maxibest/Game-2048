@@ -87,11 +87,10 @@ body {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 10px; 
-  display: grid;
-  grid-template-columns: repeat(4, 1fr); 
   gap: 10px;
   border-radius: 8px; 
   padding: 10px; 
+  position: relative;
 }
 
 .case {
@@ -106,17 +105,22 @@ body {
   font-size: 24px;
   color: #dfdedd;
   font-size: x-large;
-  font: bold;
-  transition: transform 0.2s ease;
-  will-change: transform;
-  transition: background-color 0.3s, box-shadow 0.3s;
+  font-weight: bold;
+  transition: all 0.15s ease-in-out;
+  position: relative;
+  transform-origin: center;
 }
 
-.case zoom {
-  animation: zoom 0.5s;
+.case.merge {
+  animation: merge 0.2s ease-in-out;
+  z-index: 1;
 }
 
-@keyframes zoom {
+.case.new {
+  animation: appear 0.2s ease-in-out;
+}
+
+@keyframes merge {
   0% {
     transform: scale(1);
   }
@@ -128,9 +132,19 @@ body {
   }
 }
 
-.case.move {
-  transition: transform 0.1s ease; 
-  transform: translateX(0); 
+@keyframes appear {
+  0% {
+    opacity: 0;
+    transform: scale(0);
+  }
+  50% {
+    opacity: 0.5;
+    transform: scale(1.1);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
 
 .case[data-value="2"] {
